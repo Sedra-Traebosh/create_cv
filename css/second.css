@@ -1,0 +1,685 @@
+body {
+
+    background-color: rgb(255, 255, 255);
+    overflow-x: 0;
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+}
+.header-item{
+background-color:#ccd7e8;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom:20px;
+padding:20px 0px;
+position: fixed;
+width: 100%;
+z-index: 9999;
+}
+.header .logo{
+display: flex;
+align-items: center;
+justify-content:center;
+margin-left:50px;
+cursor: pointer;
+}
+.header .logo i{
+padding-right:10px ;
+font-size: 45px;
+color:#1d88ed;
+}
+.header .logo a{
+font-weight: 900;
+transition: all 0.5s ease;
+font-size:30px;
+color:#1d88ed;
+text-decoration: none;
+}
+.header .logo:hover a{
+
+letter-spacing:1px;
+}
+.header .numbers{
+display: flex;
+font-size: 35px;
+position: absolute;
+font-weight: 700;
+letter-spacing: 9px; 
+right: 30px;
+margin: 15px 0px;
+}
+.one , .two , .three {
+cursor: pointer;
+transition: all 0.5s ease;
+text-decoration: none;
+}
+.one:hover, .two:hover, .three:hover{
+color:#1d88ed;
+font-family: 900;
+transform:scale(1.4);
+
+}
+.numbers .one{
+transform:scale(1.4);
+color:#1d88ed;
+}
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+}
+
+.diagonal {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(rgb(20, 16, 238), rgb(170, 25, 163));
+    transform: skewY(5deg);
+    border-radius: 20px;
+    left: -8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    top:200px;
+
+}
+.diagonal input{
+    font-family:sans-serif;
+    font-weight: bold;
+    transform: skewY(-5deg);
+    margin: 18px 28px;
+    position: absolute;
+    top: 220px;
+    left:20px;
+
+}
+@media (max-width:768px) {
+    .numbers {
+        font-size: 20px;
+        padding-left: 33px;
+        font-weight: 700;
+    }
+}
+
+/* .image {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: whitesmoke;
+    margin: 80px 20px;
+    transform: skewY(-5deg);
+    border-radius: 50%;
+    background-size: 100% 100%;
+} */
+
+.h1 , .main{
+    position:relative;
+    top:200px
+}
+
+
+.write {
+    text-align: center;
+    left: 30%;
+    top: 20%;
+    position: absolute;
+    background-color: transparent;
+    max-width: 100%;
+    transform: skewY(-5deg);
+    animation: tahrek 2s 1 linear;
+}
+
+.write p {
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    animation: coloring 3s infinite alternate-reverse;
+    word-wrap: break-word;
+}
+
+@media(max-width:768px) {
+    .write p {
+        font-size: 20px;
+        padding-left: 80px;
+        padding-top: 70px;
+        font-weight: 800;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+@keyframes tahrek {
+    0% {
+        left: 30%;
+        top: 20%;
+    }
+
+    25% {
+        left: 31%;
+        top: 20%;
+    }
+
+    100% {
+        left: 30%;
+        top: 20%;
+    }
+}
+
+@keyframes coloring {
+    0% {
+        color: rgba(38, 208, 238, 0.308);
+    }
+
+    25% {
+        color: rgb(16, 236, 225);
+    }
+
+    25% {
+        color: white;
+    }
+
+    100% {
+        color: rgb(16, 236, 225);
+    }
+}
+
+
+/* form {
+    max-width: 80%;
+    margin: 50px auto;
+    margin-top: 7%;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+} */
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+/* Styling Button */
+button {
+    background-color: #05c46b;
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 21px;
+    display: block;
+    width: 95%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.main {
+    margin: 100px 10% 100px 10%;
+    width: 80%;
+    background-color: transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* text-align: center; */
+    position: relative;
+    height: 800px;
+}
+.form{
+    position: absolute;
+    left: 25%;
+    top:10px;
+    background-color: gainsboro;
+    padding: 10px;
+    border: 1px solid black;
+    height: 140px;
+    margin-bottom: 10px;
+
+}
+.form label{
+    background-color: #1d88ed;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    color:#fff;
+    margin-bottom:10px ;
+}
+.form .preview{
+    height:60px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.form img{
+    height: 50px;
+    width: 50px;
+}
+.form_inputs {
+    width: 30%;
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+}
+
+.form_inputs input {
+    width: 100%;
+    height: 100%;
+    color: blueviolet;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.form_inputs .label-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(161, 43, 43);
+}
+
+.form_inputs .label-name::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid aqua;
+    left: 0px;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: all .3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+    color: rgb(43, 107, 226)
+}
+
+.form_inputs input:focus+.label-name .content-name,
+.form_inputs input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: aqua;
+
+}
+
+.form_inputs input:focus+.label-name::after,
+.form_inputs input:valid+.label-name::after {
+    transform: translateX(0%);
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    top:100px
+}
+
+.h1 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: -50px;
+    color: blueviolet
+}
+
+.country {
+    color: rgb(43, 107, 226);
+}
+
+.selection {
+    margin-top: 2%;
+    width: 30%;
+
+}
+
+@media(max-width:768px) {
+    .selection {
+        margin-top: 3.5%;
+    }
+}
+
+.select {
+    width: 50%;
+    margin-left: 8px;
+}
+
+.row1 .textarea {
+    width: 50%;
+    height: 100px;
+}
+
+@media(max-width:768px) {
+    .row1 .textarea {
+        width: 80%;
+    }
+}
+
+.about {
+    position: relative;
+    padding: 6% 0px;
+}
+
+.about span {
+    margin-left: -40%;
+    margin-top: -17px;
+    position: absolute;
+    color: blueviolet
+}
+
+@media(max-width:768px) {
+    .about span {
+        margin-left: 1%;
+    }
+}
+
+.about .textarea {
+    margin-top: 10px;
+    position: relative;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about+.first_div_in_form {
+    padding-top: 4px;
+}
+
+.App {
+    width: 50%;
+    margin-left: 8px;
+}
+
+.App_first {
+    color: rgb(43, 107, 226);
+}
+
+input {
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact {
+    color: rgb(43, 107, 226);
+}
+
+#select_URL {
+    width: 50%;
+}
+
+@media(max-width:768px) {
+    .right_of_contact {
+        margin-top: -2.9%;
+    }
+}
+
+@media(max-width:1024px) {
+    .right_of_contact {
+        margin-top: -3%;
+    }
+}
+
+@media(max-width:1201px) {
+    .right_of_contact {
+        margin-top: -3.5%;
+    }
+}
+
+.date_parent {
+    margin-top: -25px;
+}
+
+.addition {
+    line-height: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+.addition h5 {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+    letter-spacing: 2px;
+}
+
+.all_experience,
+.all_about_edu,.all_lang_skills {
+    width: 90%;
+    background-color: transparent;
+    position: relative;
+    display: block;
+    
+
+}
+
+.all_about_exp {
+    width: 80%;
+    height: 50%;
+    background-color: transparent;
+    margin: 30px 50px;
+}
+
+.span_experience {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+.textarea2 {
+    width: 100%;
+    height: 200px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 1px 2px 2px blueviolet;
+    outline: none;
+}
+
+.job_status {
+    width: 100%;
+    justify-content: space-around;
+    display: inline-flex;
+    position: relative;
+}
+
+.all_job_state .span_job_state {
+    font-family: Arial, Tahoma;
+    color: blueviolet;
+    font-size: 19px;
+}
+
+.select_job_state {
+    font-family: Times New Roman;
+    box-shadow: 1px 1px 1px blueviolet;
+}
+
+.right_div {
+    position: relative;
+    width: 50%;
+}
+
+.right_div div {
+    padding-top: 10px;
+    pointer-events: stroke;
+    width: 100%;
+}
+
+.right_div input {
+    width: 100%;
+    box-shadow: 3px 3px 2px;
+}
+
+.exit_work_experience,
+.exit_work_edu,.exit_lang_skills{
+    position: relative;
+    width: 6%;
+
+    float: right;
+    box-shadow: -1px 1px 1px black;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+    color: red;
+    font-family: 'Times New Roman';
+}
+
+@media(max-width:768px) {
+
+    .exit_work_experience,
+    .exit_work_edu,.exit_lang_skills {
+        width: 10.7%;
+    }
+
+}
+
+.textarea3 {
+    width: 100%;
+    height: 200px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 1px 2px 2px blueviolet;
+    outline: none;
+}
+
+.span_education {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: blueviolet;
+}
+
+.all_from_to {
+    position: relative;
+    display: inline-flex;
+
+}
+
+.all_from_to input {
+    width: 77%
+}
+
+.all_from_to .from_div,
+.all_from_to .to_div {
+    position: relative;
+    display: inline-flex;
+    height: 80%;
+}
+
+.from_span,
+.to_span {
+    color: blueviolet;
+    font-size: 18px
+}
+
+.header_Edu,
+.header_Edu2,
+.header_Edu3,
+.header_lang1,.header_lang2,
+.header_lang3
+{
+    width: 100%;
+    position: relative;
+    margin: 30px 50px;
+}
+
+.span_header_Edu,
+.span_header_Edu2,
+.span_header_Edu3,
+.span_lang1,
+.span_lang2
+{
+    color: blueviolet;
+}
+
+.input_header_Edu,
+.input_header_Edu2,
+.input_header_Edu3
+
+{
+    width: 60%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 1px 2px 2px blueviolet;
+    outline: none;
+}
+
+.header_of_exp,
+.header_of_edu,
+.header_of_lang
+{
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    top: -20px;
+    margin-left: 50px;
+}
+
+.all_carrer_work input,
+.all_company input,
+.job_location input {
+    outline: none;
+}
+.second_all_lang_skills{
+    width: 90%;
+    padding: 10px 10px;
+    position: relative;
+}
+.select_lang1,.select_lang2{
+    width: 20%;
+}
+.all_level_lang {
+position: relative;
+padding-top: 10px;
+}
+.divs_inside_all_level{
+display: grid; 
+grid-template-columns: 1fr 1fr; 
+grid-gap: 20px; 
+border-top:1px solid;
+width: 100%; 
+}
+.div_level1, .div_level2, .div_level3 {
+margin: 22px;
+/*height: 30px;*/
+background-color: #ccd7e8;
+}  
+.select_row11,.select_row12,.select_row13,.select_row14{
+width:100%;
+}

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            background-color: #A9A9A9;
+            box-sizing: border-box;
+            perspective: 600;
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container2 {
+            width: 100%;
+            position: relative;
+            margin: 90px auto;
+            left: -7px;
+            top: -45px;
+        }
+
+        .diagonal {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background-image: linear-gradient(rgb(20, 16, 238), rgb(170, 25, 163));
+            transform: skewY(5deg);
+            border-radius: 20px;
+            left: -8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+
+        }
+
+        .numbers {
+            float: right;
+            margin-right: 160px;
+            display: flex;
+            font-size: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            letter-spacing: 9px;
+        }
+
+        .one,
+        .two,
+        .three {
+            cursor: pointer;
+        }
+
+        .numbers .two {
+            transform: scale(1.4);
+        }
+
+        @media (max-width:768px) {
+            .numbers {
+                font-size: 20px;
+                padding-left: 33px;
+                font-weight: 700;
+            }
+        }
+
+        .image {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background-color: whitesmoke;
+            margin: 80px 20px;
+            transform: skewY(-5deg);
+            border-radius: 50%;
+            background-size: 100% 100%;
+        }
+
+        .write {
+            text-align: center;
+            left: 30%;
+            top: 20%;
+            position: absolute;
+            background-color: transparent;
+            max-width: 100%;
+            transform: skewY(-5deg);
+            animation: tahrek 2s 1 linear;
+        }
+
+        .write p {
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: white;
+            animation: coloring 3s infinite alternate-reverse;
+            word-wrap: break-word;
+        }
+
+        @media(max-width:768px) {
+            .write p {
+                font-size: 20px;
+                padding-left: 80px;
+                padding-top: 70px;
+                font-weight: 800;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+        }
+
+        @keyframes tahrek {
+            0% {
+                left: 30%;
+                top: 20%;
+            }
+
+            25% {
+                left: 31%;
+                top: 20%;
+            }
+
+            100% {
+                left: 30%;
+                top: 20%;
+            }
+        }
+
+        @keyframes coloring {
+            0% {
+                color: rgba(38, 208, 238, 0.308);
+            }
+
+            25% {
+                color: rgb(16, 236, 225);
+            }
+
+            25% {
+                color: white;
+            }
+
+            100% {
+                color: rgb(16, 236, 225);
+            }
+        }
+
+        .Pro_Name {
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            transform: skewY(-5deg);
+            letter-spacing: 5px;
+            margin: 20px 50px;
+            position: absolute;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 80%;
+            margin: 50px auto;
+            margin-top: 7%;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        /* Styling Button */
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 95%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .main {
+            margin: 100px 10%;
+            width: 80%;
+            background-color: white;
+        }
+
+        .form_inputs {
+            width: 30%;
+            position: relative;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .form_inputs input {
+            width: 100%;
+            height: 100%;
+            color: blueviolet;
+            padding-top: 20px;
+            border: none;
+            outline: none;
+        }
+
+        .form_inputs .label-name {
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border-bottom: 1px solid rgb(161, 43, 43);
+        }
+
+        .form_inputs .label-name::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-bottom: 3px solid aqua;
+            left: 0px;
+            bottom: -1px;
+            transform: translateX(-100%);
+            transition: all .3s ease;
+        }
+
+        .content-name {
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: all 0.3s ease;
+            color: rgb(43, 107, 226)
+        }
+
+        .form_inputs input:focus+.label-name .content-name,
+        .form_inputs input:valid+.label-name .content-name {
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: aqua;
+
+        }
+
+        .form_inputs input:focus+.label-name::after,
+        .form_inputs input:valid+.label-name::after {
+            transform: translateX(0%);
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .h1 {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: -50px;
+            color: blueviolet
+        }
+
+        .country {
+            color: rgb(43, 107, 226);
+        }
+
+        .selection {
+            margin-top: 2%;
+            width: 30%;
+
+        }
+
+        @media(max-width:768px) {
+            .selection {
+                margin-top: 3.5%;
+            }
+        }
+
+        .select {
+            width: 50%;
+            margin-left: 8px;
+        }
+
+        .row1 .textarea {
+            width: 50%;
+            height: 100px;
+        }
+
+        @media(max-width:768px) {
+            .row1 .textarea {
+                width: 80%;
+            }
+        }
+
+        .about {
+            position: relative;
+            padding: 6% 0px;
+        }
+
+        .about span {
+            margin-left: -40%;
+            margin-top: -17px;
+            position: absolute;
+            color: blueviolet
+        }
+
+        @media(max-width:768px) {
+            .about span {
+                margin-left: 1%;
+            }
+        }
+
+        .about .textarea {
+            margin-top: 10px;
+            position: relative;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .about+.first_div_in_form {
+            padding-top: 4px;
+        }
+
+        .App {
+            width: 50%;
+            margin-left: 8px;
+        }
+
+        .App_first {
+            color: rgb(43, 107, 226);
+        }
+
+        input {
+            font-size: 17px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .contact {
+            color: rgb(43, 107, 226);
+        }
+
+        #select_URL {
+            width: 50%;
+        }
+
+        @media(max-width:768px) {
+            .right_of_contact {
+                margin-top: -2.9%;
+            }
+        }
+
+        @media(max-width:1024px) {
+            .right_of_contact {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width:1201px) {
+            .right_of_contact {
+                margin-top: -3.5%;
+            }
+        }
+
+        .date_parent {
+            margin-top: -25px;
+        }
+
+        .addition {
+            line-height: 5px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .addition h5 {
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: blue;
+            letter-spacing: 2px;
+        }
+
+        .all_experience,
+        .all_about_edu,.all_lang_skills {
+            width: 90%;
+            background-color: transparent;
+            position: relative;
+            display: block;
+            
+
+        }
+
+        .all_about_exp {
+            width: 80%;
+            height: 50%;
+            background-color: transparent;
+            margin: 30px 50px;
+        }
+
+        .span_experience {
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 600;
+            color: blueviolet;
+        }
+
+        .textarea2 {
+            width: 100%;
+            height: 200px;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 1px 2px 2px blueviolet;
+            outline: none;
+        }
+
+        .job_status {
+            width: 100%;
+            justify-content: space-around;
+            display: inline-flex;
+            position: relative;
+        }
+
+        .all_job_state .span_job_state {
+            font-family: Arial, Tahoma;
+            color: blueviolet;
+            font-size: 19px;
+        }
+
+        .select_job_state {
+            font-family: Times New Roman;
+            box-shadow: 1px 1px 1px blueviolet;
+        }
+
+        .right_div {
+            position: relative;
+            width: 50%;
+        }
+
+        .right_div div {
+            padding-top: 10px;
+            pointer-events: stroke;
+            width: 100%;
+        }
+
+        .right_div input {
+            width: 100%;
+            box-shadow: 3px 3px 2px;
+        }
+
+        .exit_work_experience,
+        .exit_work_edu{
+            position: relative;
+            width: 6%;
+            height: 3%;
+            float: right;
+            box-shadow: -1px 1px 1px black;
+            text-align: center;
+            border: 1px solid black;
+            cursor: pointer;
+            color: red;
+            font-family: 'Times New Roman';
+        }
+
+        @media(max-width:768px) {
+
+            .exit_work_experience,
+            .exit_work_edu {
+                width: 10%;
+            }
+
+        }
+
+        .textarea3 {
+            width: 100%;
+            height: 200px;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 1px 2px 2px blueviolet;
+            outline: none;
+        }
+
+        .span_education {
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 600;
+            color: blueviolet;
+        }
+
+        .all_from_to {
+            position: relative;
+            display: inline-flex;
+
+        }
+
+        .all_from_to input {
+            width: 77%
+        }
+
+        .all_from_to .from_div,
+        .all_from_to .to_div {
+            position: relative;
+            display: inline-flex;
+            height: 80%;
+        }
+
+        .from_span,
+        .to_span {
+            color: blueviolet;
+            font-size: 18px
+        }
+
+        .header_Edu,
+        .header_Edu2,
+        .header_Edu3,
+        .header_lang1
+        {
+            width: 100%;
+            display: block;
+            position: relative;
+            margin: 30px 50px;
+        }
+
+        .span_header_Edu,
+        .span_header_Edu2,
+        .span_header_Edu3,
+        .span_lang1
+        {
+            color: blueviolet;
+        }
+
+        .input_header_Edu,
+        .input_header_Edu2,
+        .input_header_Edu3,
+        .input_lang1
+        {
+            width: 60%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 1px 2px 2px blueviolet;
+            outline: none;
+        }
+
+        .header_of_exp,
+        .header_of_edu,
+        .header_of_lang
+        {
+            color: blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            font-weight: bold;
+            top: -20px;
+            margin-left: 50px;
+        }
+
+        .all_carrer_work input,
+        .all_company input,
+        .job_location input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container2">
+        <div class="numbers">
+            <span class="one">1</span>
+            <span class="sahm1">&rarr;</span>
+            <span class="two">2</span>
+            <span class="sahm2">&#x2192;</span>
+            <span class="three">3</span>
+        </div>
+        <div class="diagonal">
+            <div class="Pro_Name">QFF</div>
+            <div class="image" id="image2"></div>
+            <div class="write">
+                <p id="p1"></p>
+            </div>
+        </div>
+        <h1 class="h1"><i>Complete this step and type your information in form please</i></h1>
+        <div class="main">
+            <div class="row1 about">
+                <span>About Me</span>
+                <textarea class="textarea"></textarea>
+
+
+            </div>
+            <div class="row1 first_div_in_form">
+                <div class="form_inputs">
+                    <input type="text" name="name" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">First Name</span>
+                    </label>
+                </div>
+
+                <div class="form_inputs">
+                    <input type="text" name="name" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Last Name</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="row1">
+                <div class="form_inputs">
+                    <input type="text" id="gmail" name="gmail" onfocus="gmail()" autocomplete="on" required />
+                    <label for="name" class="label-name">
+                        <span class="content-name">Email</span>
+                    </label>
+                </div>
+
+
+                <div class="form_inputs">
+                    <input type="text" name="text" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Adress</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="row1">
+                <div class="form_inputs selection">
+                    <span class="country">Country</span>
+                    <select class="select" id="select" onchange="country();">
+                        <option>Syria</option>
+                        <option>Egypt</option>
+                        <option>Palestine</option>
+                        <option>Sudan</option>
+                        <option>Tunisian</option>
+                        <option>Saudi Arabia</option>
+                        <option>Algeria</option>
+                        <option>Somalia</option>
+                        <option>Morocco</option>
+                        <option>Yemen</option>
+                        <option>Libya</option>
+                        <option>Jordan</option>
+                        <option>Lebanon</option>
+                        <option>United Arab Of Emirates</option>
+                        <option>Mauritania</option>
+                        <option>Kuwait</option>
+                        <option>Oman</option>
+                        <option>Qatar</option>
+                        <option>Jubbuti</option>
+                        <option>Bahrain</option>
+                        <option>Union Of Comoros</option>
+                    </select>
+
+                </div>
+
+                <div class="form_inputs phone1">
+                    <input type="text" id="phone" name="name" autocomplete="off" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Phone</span>
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="row1">
+                <div class="form_inputs date_parent">
+                    <input type="date">
+                </div>
+
+
+                <div class="form_inputs">
+                    <select class="gender">
+                        <option>Select</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row1 first_div_in_form">
+                <div class="form_inputs">
+                    <span class="contact">Contact</span>
+                    <select id="select_URL" onchange="URL1()">
+                        <option>Select</option>
+                        <option>Facebook</option>
+                        <option>Twitter</option>
+                        <option>Whatsup</option>
+                        <option>Telegram</option>
+                        <option>Github</option>
+                        <option>Stackoverflow</option>
+                    </select>
+                </div>
+
+                <div class="form_inputs right_of_contact">
+                    <input type="text" id="URL" name="name" autocomplete="off" placeholder="" required>
+                    <label for="name" class="label-name">
+                </div>
+            </div>
+
+
+            <div class="row1">
+                <div class="addition">
+                    <h5>+select additiion options+</h5>
+                    <select class="selectpattern" id="selectpattern1" onchange="select()">
+                        <option>Select</option>
+                        <option>Work Experience</option>
+                        <option>Education And Training</option>
+                        <option>Language Skills</option>
+                        <option>Projects</option>
+
+                    </select>
+                </div>
+            </div><br><br>
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var type1 = ["C", "r", "e", "a", "t", "e", " Y", "o", "u", "r", " C", "V"];
+        var t = setInterval(typing, 100);
+        var i = 0;
+        function typing() {
+            document.getElementById("p1").innerText += type1[i];
+            i++;
+            if (i == type1.length) {
+                clearInterval(t);
+            }
+        }
+
+        function gmail() {
+            document.getElementById("gmail").setAttribute("placeholder", "             user@gmail.com");
+        }
+        function notgmail() {
+            document.getElementById("gmail").placeholder = " ";
+        }
+        function country() {
+            var select1 = document.getElementById("select");
+            var val = select1.options[select1.selectedIndex].value;
+            var call = document.getElementById("phone");
+            if (val == "Syria") {
+                call.placeholder = "         +963";
+            }
+            else if (val == "Egypt") {
+                call.placeholder = "           +20";
+            }
+            else if (val == "Palestine") {
+                call.placeholder = "           +970";
+            }
+            else if (val == "Sudan") {
+                call.placeholder = "          +249";
+            }
+            else if (val == "Tunisian") {
+                call.placeholder = "          +216";
+            }
+            else if (val == "Saudi Arabia") {
+                call.placeholder = "          +966";
+            }
+            else if (val == "Algeria") {
+                call.placeholder = "          +213";
+            }
+            else if (val == "Somalia") {
+                call.placeholder = "          +252";
+            }
+            else if (val == "Morocco") {
+                call.placeholder = "          +212";
+            }
+            else if (val == "Yemen") {
+                call.placeholder = "          +967";
+            }
+            else if (val == "Libya") {
+                call.placeholder = "          +218";
+            }
+            else if (val == "Jordon") {
+                call.placeholder = "           +962";
+            }
+            else if (val == "Lebanon") {
+                call.placeholder = "           +961";
+            }
+            else if (val == "United Arab Of Emirates") {
+                call.placeholder = "           +971";
+            }
+            else if (val == "Mauritania") {
+                call.placeholder = "           +222";
+            }
+            else if (val == "Kuwait") {
+                call.placeholder = "           +965";
+            }
+            else if (val == "Oman") {
+                call.placeholder = "           +968";
+            }
+            else if (val == "Qatar") {
+                call.placeholder = "           +974";
+            }
+            else if (val == "Jubbuti") {
+                call.placeholder = "           +253";
+            }
+            else if (val == "Bahrain") {
+                call.placeholder = "           +973";
+            }
+            else if (val == "Union Of Comoros") {
+                call.placeholder = "           +269";
+            }
+        }
+        function URL1() {
+            var select2 = document.getElementById("select_URL");
+            var val3 = select2.options[select2.selectedIndex].value;
+            document.getElementById("URL").placeholder = "URL of " + val3;
+        }
+
+        function select() {
+            var main = document.getElementsByClassName("main")[0];
+            var additionselection = document.getElementById("selectpattern1");
+            var res_of_add = additionselection.options[additionselection.selectedIndex].value;
+            if (res_of_add == "Work Experience") {
+
+                var all_experience = document.createElement("div");
+                all_experience.className = "all_experience";
+                main.appendChild(all_experience);
+
+
+                var header_of_exp = document.createElement("span");
+                header_of_exp.className = "header_of_exp";
+                header_of_exp.innerHTML = "Work Experience";
+                all_experience.appendChild(header_of_exp);
+
+                var exit_work_experience = document.createElement("div");
+                exit_work_experience.className = "exit_work_experience";
+                all_experience.appendChild(exit_work_experience);
+                exit_work_experience.innerText = "close";
+
+
+                var exit = document.getElementsByClassName("exit_work_experience")[0]
+                exit.addEventListener("click", function exit1() {
+                    document.getElementsByClassName("all_experience")[0].style.display = "none";
+                })
+
+                var all_about_exp = document.createElement("div");
+                all_about_exp.className = "all_about_exp";
+                all_experience.appendChild(all_about_exp);
+
+                var span_exeperiencd = document.createElement("div");
+                span_exeperiencd.className = "span_experience";
+                span_exeperiencd.innerHTML = "About Your Exeprience";
+                all_about_exp.appendChild(span_exeperiencd);
+
+                var textarea_exeprience = document.createElement("textarea");
+                textarea_exeprience.className = "textarea2";
+                all_about_exp.appendChild(textarea_exeprience);
+
+
+                var job_status = document.createElement("div");
+                job_status.className = "job_status";
+                all_experience.appendChild(job_status);
+
+                var all_job_state = document.createElement("div");
+                all_job_state.className = "all_job_state";
+
+                var span_job_state = document.createElement("span");
+                span_job_state.innerText = "Job Status                ";
+                span_job_state.className = "span_job_state";
+                all_job_state.appendChild(span_job_state);
+
+                var select_job_state = document.createElement("select");
+                select_job_state.className = "select_job_state";
+                select_job_state.id = "select_job_state1";
+                all_job_state.appendChild(select_job_state);
+                job_status.appendChild(all_job_state);
+
+                var option1 = document.createElement("option");
+                option1.innerText = "Select Status";
+                select_job_state.appendChild(option1);
+
+
+                var option2 = document.createElement("option");
+                option2.innerText = "UnEmployeer";
+                select_job_state.appendChild(option2);
+
+                var option3 = document.createElement("option");
+                option3.innerText = "Employeer";
+                select_job_state.appendChild(option3);
+
+
+                var val2 = document.getElementById("select_job_state1");
+                val2.addEventListener("change", function Company() {
+                    var value_of_jobstate = val2.options[val2.selectedIndex].value;
+                    if (value_of_jobstate == "Employeer") {
+                        var right_div = document.createElement("div");
+                        right_div.className = "right_div";
+
+                        var all_from_to = document.createElement("div");
+                        all_from_to.className = "all_from_to";
+                        right_div.appendChild(all_from_to);
+
+                        var from_div = document.createElement("div");
+                        from_div.className = "from_div";
+                        all_from_to.appendChild(from_div);
+
+                        var from_span = document.createElement("span");
+                        from_span.innerHTML = "from";
+                        from_span.className = "from_span";
+                        from_div.appendChild(from_span);
+
+                        var from_input = document.createElement("input");
+                        from_input.setAttribute("type", "date");
+                        from_div.appendChild(from_input);
+
+                        var to_div = document.createElement("div");
+                        to_div.className = "to_div";
+                        all_from_to.appendChild(to_div);
+
+                        var to_span = document.createElement("span");
+                        to_span.innerHTML = "To";
+                        to_span.className = "to_span";
+                        to_div.appendChild(to_span);
+
+                        var to_input = document.createElement("input");
+                        to_input.setAttribute("type", "date");
+                        to_div.appendChild(to_input);
+
+
+                        var all_carrer_work = document.createElement("div");
+                        all_carrer_work.className = "all_carrer_work ";
+
+
+                        var input_carrer_work = document.createElement("input");
+                        all_carrer_work.appendChild(input_carrer_work);
+                        right_div.appendChild(all_carrer_work);
+                        input_carrer_work.placeholder = "Occupation or position held";
+
+
+                        var all_company = document.createElement("div");
+                        all_company.className = "all_company";
+                        job_status.appendChild(all_company);
+                        job_status.appendChild(right_div);
+                        right_div.appendChild(all_company);
+
+
+                        var input_company = document.createElement("input");
+                        all_company.appendChild(input_company);
+                        input_company.placeholder = "Name Of Company";
+
+                        var job_loacation = document.createElement("div");
+                        job_loacation.className = "job_location";
+                        right_div.appendChild(job_loacation);
+
+
+                        var input_job_location = document.createElement("input");
+                        input_job_location.className = "input_job_Location";
+                        job_loacation.appendChild(input_job_location);
+                        input_job_location.placeholder = "job location(City)";
+                    }
+                    else if (value_of_jobstate == "UnEmployeer") {
+                        document.getElementsByClassName("right_div")[0].style.display = "none";
+                    }
+                    var br_exp = document.createElement("br");
+                    all_experience.appendChild(br_exp);
+                    var br_exp2 = document.createElement("br");
+                    all_experience.appendChild(br_exp2);
+                })
+
+            }
+            else if (res_of_add == "Education And Training") {
+
+                var all_education_training = document.createElement("div");
+                all_education_training.className = "all_about_edu";
+                main.appendChild(all_education_training);
+
+                var header_of_edu = document.createElement("span");
+                header_of_edu.className = "header_of_edu";
+                header_of_edu.innerHTML = "Education And Training";
+                all_education_training.appendChild(header_of_edu);
+
+                var exit_work_edu = document.createElement("div");
+                exit_work_edu.className = "exit_work_edu";
+                all_education_training.appendChild(exit_work_edu);
+                exit_work_edu.innerText = "close";
+
+                var exit2 = document.getElementsByClassName("exit_work_edu")[0];
+                exit2.addEventListener("click", function exit2() {
+                    document.getElementsByClassName("all_about_edu")[0].style.display = "none";
+                })
+
+                var bredu = document.createElement("br");
+                all_education_training.appendChild(bredu);
+
+                var bredu2 = document.createElement("br");
+                all_education_training.appendChild(bredu2);
+
+
+                var header_Edu = document.createElement("div");
+                header_Edu.className = "header_Edu";
+                all_education_training.appendChild(header_Edu);
+
+                var span_header_Edu = document.createElement("span");
+                span_header_Edu.className = "span_header_Edu";
+                span_header_Edu.innerHTML = "Title of qualification awarded";
+                header_Edu.appendChild(span_header_Edu);
+
+                var br1 = document.createElement("br");
+                header_Edu.appendChild(br1);
+
+                var input_header_Edu = document.createElement("input");
+                input_header_Edu.type = "text";
+                input_header_Edu.className = " input_header_Edu";
+                header_Edu.appendChild(input_header_Edu);
+
+
+
+                var header_Edu2 = document.createElement("div");
+                header_Edu2.className = "header_Edu2";
+                all_education_training.appendChild(header_Edu2);
+
+                var span_header_Edu2 = document.createElement("span");
+                span_header_Edu2.className = "span_header_Edu2";
+                span_header_Edu2.innerHTML = "Organization which Provide training";
+                header_Edu2.appendChild(span_header_Edu2);
+
+                var br2 = document.createElement("br");
+                header_Edu2.appendChild(br2);
+
+                var input_header_Edu2 = document.createElement("input");
+                input_header_Edu2.type = "text";
+                input_header_Edu2.className = "input_header_Edu2";
+                header_Edu2.appendChild(input_header_Edu2);
+
+
+                var header_Edu3 = document.createElement("div");
+                header_Edu3.className = "header_Edu3";
+                all_education_training.appendChild(header_Edu3);
+
+                var span_header_Edu3 = document.createElement("span");
+                span_header_Edu3.className = "span_header_Edu3";
+                span_header_Edu3.innerHTML = "City";
+                header_Edu3.appendChild(span_header_Edu3);
+
+
+                var br3 = document.createElement("br");
+                header_Edu3.appendChild(br3);
+
+
+                var input_header_Edu3 = document.createElement("input");
+                input_header_Edu3.type = "text";
+                input_header_Edu3.className = "input_header_Edu3";
+                header_Edu3.appendChild(input_header_Edu3);
+
+
+                var br3 = document.createElement("br");
+                all_education_training.appendChild(br3);
+                var br4 = document.createElement("br");
+                all_education_training.appendChild(br4);
+            }
+            else if (res_of_add == "Language Skills") {
+                var all_lang_skills = document.createElement("div");
+                all_lang_skills.className = "all_lang_skills";
+                main.appendChild(all_lang_skills);
+
+                var header_lang1=document.createElement("div");
+                all_lang_skills.appendChild(header_lang1);
+                header_lang1.className="header_lang1";
+
+                var span_lang1=document.createElement("span");
+                span_lang1.innerHTML="Mother Tongue(s)";
+                span_lang1.className="span_lang1";
+                header_lang1.appendChild(span_lang1);
+                var br_lang1=document.createElement("br");
+                header_lang1.appendChild(br_lang1);
+
+                var input_lang1=document.createElement("input");
+                header_lang1.appendChild(input_lang1);
+                input_lang1.className="input_lang1";
+
+                var be_between1=document.createElement("br");
+                header_lang1.appendChild(be_between1);
+
+                var header_of_lang=document.createElement("span");
+                header_of_lang.className="header_of_lang";
+                header_of_lang.innerHTML="Language Skills";
+                all_lang_skills.prepend(header_of_lang);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

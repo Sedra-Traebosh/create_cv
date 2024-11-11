@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/second.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container2">
+        <div class="header">
+            <div class="header-item">
+                <div class="logo">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="index.html">CV Builder.</a>
+                </div>
+
+                <div class="numbers">
+                    <a href="index.html" class="one" target="_blank">1</a>
+                    <span class="sahm1">&rarr;</sp>
+                        <a class="two" href="second_CV.html" target="_blank">2</a>
+                        <span class="sahm2">&#x2192;</span>
+                        <a class="three" href="three.html" target="_blank">3</a>
+                </div>
+            </div>
+
+            </section>
+            <div class="diagonal">
+                <div class="write">
+                    <p id="p1"></p>
+                </div>
+            </div>
+            <h1 class="h1"><i>Complete this step and type your information in form please</i></h1>
+
+            <div class="main">
+                <form method="post" enctype="multipart/form-data" class="form">
+                    <div>
+                        <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+                        <input
+                        type="file"
+                        id="image_uploads"
+                        name="image_uploads"
+                        accept=".jpg, .jpeg, .png"
+                        multiple />
+                    </div>
+                    <div class="preview">
+                        <p>No files currently selected for upload</p>
+                    </div>
+                </form>                  
+
+                <div class="row1 about">
+                    <span>About Me</span>
+                    <textarea class="textarea"></textarea>
+
+
+                </div>
+                <div class="row1 first_div_in_form">
+                    <div class="form_inputs">
+                        <input type="text" name="name" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">First Name</span>
+                        </label>
+                    </div>
+
+                    <div class="form_inputs">
+                        <input type="text" name="name" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Last Name</span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="row1">
+                    <div class="form_inputs">
+                        <input type="text" id="gmail" name="gmail" onfocus="gmail()" autocomplete="on" required />
+                        <label for="name" class="label-name">
+                            <span class="content-name">Email</span>
+                        </label>
+                    </div>
+
+
+                    <div class="form_inputs">
+                        <input type="text" name="text" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Adress</span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="row1">
+                    <div class="form_inputs selection">
+                        <span class="country">Country</span>
+                        <select class="select" id="select" onchange="country();">
+                            <option>Syria</option>
+                            <option>Egypt</option>
+                            <option>Palestine</option>
+                            <option>Sudan</option>
+                            <option>Tunisian</option>
+                            <option>Saudi Arabia</option>
+                            <option>Algeria</option>
+                            <option>Somalia</option>
+                            <option>Morocco</option>
+                            <option>Yemen</option>
+                            <option>Libya</option>
+                            <option>Jordan</option>
+                            <option>Lebanon</option>
+                            <option>United Arab Of Emirates</option>
+                            <option>Mauritania</option>
+                            <option>Kuwait</option>
+                            <option>Oman</option>
+                            <option>Qatar</option>
+                            <option>Jubbuti</option>
+                            <option>Bahrain</option>
+                            <option>Union Of Comoros</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form_inputs phone1">
+                        <input type="text" id="phone" name="name" autocomplete="off" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Phone</span>
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <div class="row1">
+                    <div class="form_inputs date_parent">
+                        <input type="date">
+                    </div>
+
+
+                    <div class="form_inputs">
+                        <select class="gender">
+                            <option>Select</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="row1 first_div_in_form">
+                    <div class="form_inputs">
+                        <span class="contact">Contact</span>
+                        <select id="select_URL" onchange="URL1()">
+                            <option>Select</option>
+                            <option>Facebook</option>
+                            <option>Twitter</option>
+                            <option>Whatsup</option>
+                            <option>Telegram</option>
+                            <option>Github</option>
+                            <option>Stackoverflow</option>
+                        </select>
+                    </div>
+
+                    <div class="form_inputs right_of_contact">
+                        <input type="text" id="URL" name="name" autocomplete="off" placeholder="" required>
+                        <label for="name" class="label-name">
+                    </div>
+                </div>
+
+
+                <div class="row1">
+                    <div class="addition">
+                        <h5>+select additiion options+</h5>
+                        <select class="selectpattern" id="selectpattern1" onchange="select()">
+                            <option>Select</option>
+                            <option>Work Experience</option>
+                            <option>Education And Training</option>
+                            <option>Language Skills</option>
+                            <option>Projects</option>
+
+                        </select>
+                    </div>
+                </div><br><br>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var type1 = ["C", "r", "e", "a", "t", "e", " Y", "o", "u", "r", " C", "V"];
+            var t = setInterval(typing, 100);
+            var i = 0;
+            function typing() {
+                document.getElementById("p1").innerText += type1[i];
+                i++;
+                if (i == type1.length) {
+                    clearInterval(t);
+                }
+            }
+
+            //=========================== upload image ===================//
+            const input = document.querySelector('input');
+            const preview = document.querySelector('.preview');
+            input.style.opacity = 0;
+            input.addEventListener('change', updateImageDisplay);
+            function updateImageDisplay() {
+    while(preview.firstChild) {
+    preview.removeChild(preview.firstChild);
+    }
+    const curFiles = input.files;
+        if (curFiles.length === 0) {
+            const para = document.createElement('p');
+            para.textContent = 'No files currently selected for upload';
+            preview.appendChild(para);
+        } else {
+    const list = document.createElement('ol');
+    preview.appendChild(list);
+    for (const file of curFiles) {
+        const listItem = document.createElement('li');
+        const para = document.createElement('p');
+        if (validFileType(file)) {
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
+        const image = document.createElement('img');
+        image.src = URL.createObjectURL(file);
+        listItem.appendChild(image);
+        listItem.appendChild(para);
+        } else {
+        para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+        listItem.appendChild(para);
+      }
+      list.appendChild(listItem);
+    }
+  }
+}
+
+const fileTypes = [
+  "image/apng",
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon"
+];
+function validFileType(file) {
+  return fileTypes.includes(file.type);
+}
+function returnFileSize(number) {
+  if (number < 1024) {
+    return `${number} bytes`;
+  } else if (number >= 1024 && number < 1048576) {
+    return `${(number / 1024).toFixed(1)} KB`;
+  } else if (number >= 1048576) {
+    return `${(number / 1048576).toFixed(1)} MB`;
+  }
+}
+
+
+//========================  end  =========================//
+
+            function gmail() {
+                document.getElementById("gmail").setAttribute("placeholder", "             user@gmail.com");
+            }
+            function notgmail() {
+                document.getElementById("gmail").placeholder = " ";
+            }
+            function country() {
+                var select1 = document.getElementById("select");
+                var val = select1.options[select1.selectedIndex].value;
+                var call = document.getElementById("phone");
+                if (val == "Syria") {
+                    call.placeholder = "         +963";
+                }
+                else if (val == "Egypt") {
+                    call.placeholder = "           +20";
+                }
+                else if (val == "Palestine") {
+                    call.placeholder = "           +970";
+                }
+                else if (val == "Sudan") {
+                    call.placeholder = "          +249";
+                }
+                else if (val == "Tunisian") {
+                    call.placeholder = "          +216";
+                }
+                else if (val == "Saudi Arabia") {
+                    call.placeholder = "          +966";
+                }
+                else if (val == "Algeria") {
+                    call.placeholder = "          +213";
+                }
+                else if (val == "Somalia") {
+                    call.placeholder = "          +252";
+                }
+                else if (val == "Morocco") {
+                    call.placeholder = "          +212";
+                }
+                else if (val == "Yemen") {
+                    call.placeholder = "          +967";
+                }
+                else if (val == "Libya") {
+                    call.placeholder = "          +218";
+                }
+                else if (val == "Jordon") {
+                    call.placeholder = "           +962";
+                }
+                else if (val == "Lebanon") {
+                    call.placeholder = "           +961";
+                }
+                else if (val == "United Arab Of Emirates") {
+                    call.placeholder = "           +971";
+                }
+                else if (val == "Mauritania") {
+                    call.placeholder = "           +222";
+                }
+                else if (val == "Kuwait") {
+                    call.placeholder = "           +965";
+                }
+                else if (val == "Oman") {
+                    call.placeholder = "           +968";
+                }
+                else if (val == "Qatar") {
+                    call.placeholder = "           +974";
+                }
+                else if (val == "Jubbuti") {
+                    call.placeholder = "           +253";
+                }
+                else if (val == "Bahrain") {
+                    call.placeholder = "           +973";
+                }
+                else if (val == "Union Of Comoros") {
+                    call.placeholder = "           +269";
+                }
+            }
+            function URL1() {
+                var select2 = document.getElementById("select_URL");
+                var val3 = select2.options[select2.selectedIndex].value;
+                if (val3 == "Select") { document.getElementById("URL").placeholder = " " }
+                else {
+                    document.getElementById("URL").placeholder = "URL of " + val3;
+                }
+            }
+
+            function select() {
+                var main = document.getElementsByClassName("main")[0];
+                var additionselection = document.getElementById("selectpattern1");
+                var res_of_add = additionselection.options[additionselection.selectedIndex].value;
+                if (res_of_add == "Work Experience") {
+
+                    var all_experience = document.createElement("div");
+                    all_experience.className = "all_experience";
+                    main.appendChild(all_experience);
+
+
+                    var header_of_exp = document.createElement("span");
+                    header_of_exp.className = "header_of_exp";
+                    header_of_exp.innerHTML = "Work Experience";
+                    all_experience.appendChild(header_of_exp);
+
+                    var exit_work_experience = document.createElement("div");
+                    exit_work_experience.className = "exit_work_experience";
+                    all_experience.appendChild(exit_work_experience);
+                    exit_work_experience.innerText = "close";
+
+
+                    var exit = document.getElementsByClassName("exit_work_experience")[0]
+                    exit.addEventListener("click", function exit1() {
+                        document.getElementsByClassName("all_experience")[0].style.display = "none";
+                    })
+
+                    var all_about_exp = document.createElement("div");
+                    all_about_exp.className = "all_about_exp";
+                    all_experience.appendChild(all_about_exp);
+
+                    var span_exeperiencd = document.createElement("div");
+                    span_exeperiencd.className = "span_experience";
+                    span_exeperiencd.innerHTML = "About Your Exeprience";
+                    all_about_exp.appendChild(span_exeperiencd);
+
+                    var textarea_exeprience = document.createElement("textarea");
+                    textarea_exeprience.className = "textarea2";
+                    all_about_exp.appendChild(textarea_exeprience);
+
+
+                    var job_status = document.createElement("div");
+                    job_status.className = "job_status";
+                    all_experience.appendChild(job_status);
+
+                    var all_job_state = document.createElement("div");
+                    all_job_state.className = "all_job_state";
+
+                    var span_job_state = document.createElement("span");
+                    span_job_state.innerText = "Job Status                ";
+                    span_job_state.className = "span_job_state";
+                    all_job_state.appendChild(span_job_state);
+
+                    var select_job_state = document.createElement("select");
+                    select_job_state.className = "select_job_state";
+                    select_job_state.id = "select_job_state1";
+                    all_job_state.appendChild(select_job_state);
+                    job_status.appendChild(all_job_state);
+
+
+                    var option1 = document.createElement("option");
+                    option1.innerText = "Select Status";
+                    select_job_state.appendChild(option1);
+
+
+                    var option2 = document.createElement("option");
+                    option2.innerText = "UnEmployeer";
+                    select_job_state.appendChild(option2);
+
+                    var option3 = document.createElement("option");
+                    option3.innerText = "Employeer";
+                    select_job_state.appendChild(option3);
+
+
+                    var val2 = document.getElementById("select_job_state1");
+                    val2.addEventListener("change", function Company() {
+                        var value_of_jobstate = val2.options[val2.selectedIndex].value;
+                        if (value_of_jobstate == "Employeer") {
+                            var right_div = document.createElement("div");
+                            right_div.className = "right_div";
+
+                            var all_from_to = document.createElement("div");
+                            all_from_to.className = "all_from_to";
+                            right_div.appendChild(all_from_to);
+
+                            var from_div = document.createElement("div");
+                            from_div.className = "from_div";
+                            all_from_to.appendChild(from_div);
+
+                            var from_span = document.createElement("span");
+                            from_span.innerHTML = "from";
+                            from_span.className = "from_span";
+                            from_div.appendChild(from_span);
+
+                            var from_input = document.createElement("input");
+                            from_input.setAttribute("type", "date");
+                            from_div.appendChild(from_input);
+
+                            var to_div = document.createElement("div");
+                            to_div.className = "to_div";
+                            all_from_to.appendChild(to_div);
+
+                            var to_span = document.createElement("span");
+                            to_span.innerHTML = "To";
+                            to_span.className = "to_span";
+                            to_div.appendChild(to_span);
+
+                            var to_input = document.createElement("input");
+                            to_input.setAttribute("type", "date");
+                            to_div.appendChild(to_input);
+
+
+                            var all_carrer_work = document.createElement("div");
+                            all_carrer_work.className = "all_carrer_work ";
+
+
+                            var input_carrer_work = document.createElement("input");
+                            all_carrer_work.appendChild(input_carrer_work);
+                            right_div.appendChild(all_carrer_work);
+                            input_carrer_work.placeholder = "Occupation or position held";
+
+
+                            var all_company = document.createElement("div");
+                            all_company.className = "all_company";
+                            job_status.appendChild(all_company);
+                            job_status.appendChild(right_div);
+                            right_div.appendChild(all_company);
+
+
+                            var input_company = document.createElement("input");
+                            all_company.appendChild(input_company);
+                            input_company.placeholder = "Name Of Company";
+
+                            var job_loacation = document.createElement("div");
+                            job_loacation.className = "job_location";
+                            right_div.appendChild(job_loacation);
+
+
+                            var input_job_location = document.createElement("input");
+                            input_job_location.className = "input_job_Location";
+                            job_loacation.appendChild(input_job_location);
+                            input_job_location.placeholder = "job location(City)";
+                        }
+                        else if (value_of_jobstate == "UnEmployeer") {
+                            document.getElementsByClassName("right_div")[0].style.display = "none";
+                        }
+                        var br_exp = document.createElement("br");
+                        all_experience.appendChild(br_exp);
+                        var br_exp2 = document.createElement("br");
+                        all_experience.appendChild(br_exp2);
+                    })
+
+                }
+                else if (res_of_add == "Education And Training") {
+
+                    var all_education_training = document.createElement("div");
+                    all_education_training.className = "all_about_edu";
+                    main.appendChild(all_education_training);
+
+                    var header_of_edu = document.createElement("span");
+                    header_of_edu.className = "header_of_edu";
+                    header_of_edu.innerHTML = "Education And Training";
+                    all_education_training.appendChild(header_of_edu);
+
+                    var exit_work_edu = document.createElement("div");
+                    exit_work_edu.className = "exit_work_edu";
+                    all_education_training.appendChild(exit_work_edu);
+                    exit_work_edu.innerText = "close";
+
+                    var exit2 = document.getElementsByClassName("exit_work_edu")[0];
+                    exit2.addEventListener("click", function exit2() {
+                        document.getElementsByClassName("all_about_edu")[0].style.display = "none";
+                    })
+
+                    var bredu = document.createElement("br");
+                    all_education_training.appendChild(bredu);
+
+                    var bredu2 = document.createElement("br");
+                    all_education_training.appendChild(bredu2);
+
+
+                    var header_Edu = document.createElement("div");
+                    header_Edu.className = "header_Edu";
+                    all_education_training.appendChild(header_Edu);
+
+                    var span_header_Edu = document.createElement("span");
+                    span_header_Edu.className = "span_header_Edu";
+                    span_header_Edu.innerHTML = "Title of qualification awarded";
+                    header_Edu.appendChild(span_header_Edu);
+
+                    var br1 = document.createElement("br");
+                    header_Edu.appendChild(br1);
+
+                    var input_header_Edu = document.createElement("input");
+                    input_header_Edu.type = "text";
+                    input_header_Edu.className = " input_header_Edu";
+                    header_Edu.appendChild(input_header_Edu);
+
+
+
+                    var header_Edu2 = document.createElement("div");
+                    header_Edu2.className = "header_Edu2";
+                    all_education_training.appendChild(header_Edu2);
+
+                    var span_header_Edu2 = document.createElement("span");
+                    span_header_Edu2.className = "span_header_Edu2";
+                    span_header_Edu2.innerHTML = "Organization which Provide training";
+                    header_Edu2.appendChild(span_header_Edu2);
+
+                    var br2 = document.createElement("br");
+                    header_Edu2.appendChild(br2);
+
+                    var input_header_Edu2 = document.createElement("input");
+                    input_header_Edu2.type = "text";
+                    input_header_Edu2.className = "input_header_Edu2";
+                    header_Edu2.appendChild(input_header_Edu2);
+
+
+                    var header_Edu3 = document.createElement("div");
+                    header_Edu3.className = "header_Edu3";
+                    all_education_training.appendChild(header_Edu3);
+
+                    var span_header_Edu3 = document.createElement("span");
+                    span_header_Edu3.className = "span_header_Edu3";
+                    span_header_Edu3.innerHTML = "City";
+                    header_Edu3.appendChild(span_header_Edu3);
+
+
+                    var br3 = document.createElement("br");
+                    header_Edu3.appendChild(br3);
+
+
+                    var input_header_Edu3 = document.createElement("input");
+                    input_header_Edu3.type = "text";
+                    input_header_Edu3.className = "input_header_Edu3";
+                    header_Edu3.appendChild(input_header_Edu3);
+
+
+                    var br3 = document.createElement("br");
+                    all_education_training.appendChild(br3);
+                    var br4 = document.createElement("br");
+                    all_education_training.appendChild(br4);
+                }
+                else if (res_of_add == "Language Skills") {
+                    var all_lang_skills = document.createElement("div");
+                    all_lang_skills.className = "all_lang_skills";
+                    main.appendChild(all_lang_skills);
+
+                    var exit_lang_skills = document.createElement("div");
+                    exit_lang_skills.className = "exit_lang_skills";
+                    all_lang_skills.appendChild(exit_lang_skills);
+                    exit_lang_skills.innerText = "close";
+
+                    var exit3 = document.getElementsByClassName("exit_lang_skills")[0]
+                    exit3.addEventListener("click", function exit4() {
+                        document.getElementsByClassName("all_lang_skills")[0].style.display = "none";
+                    })
+
+
+                    var second_all_lang_skills = document.createElement("div");
+                    all_lang_skills.appendChild(second_all_lang_skills);
+                    second_all_lang_skills.className = "second_all_lang_skills";
+
+                    var header_lang1 = document.createElement("div");
+                    second_all_lang_skills.appendChild(header_lang1);
+                    header_lang1.className = "header_lang1";
+
+                    var span_lang1 = document.createElement("span");
+                    span_lang1.innerHTML = "Mother Tongue(s)  ";
+                    span_lang1.className = "span_lang1";
+                    header_lang1.appendChild(span_lang1);
+
+
+                    var languages = ["arabic", "english", "french", "germany", "spain", "persian"];
+                    var select_lang1 = document.createElement("select");
+                    for (var i = 0; i < 6; i++) {
+                        var sel = document.createElement("option");
+                        sel.innerText = languages[i];
+                        select_lang1.appendChild(sel);
+                    }
+                    header_lang1.appendChild(select_lang1);
+                    select_lang1.className = "select_lang1";
+
+
+
+
+
+                    var header_of_lang = document.createElement("span");
+                    header_of_lang.className = "header_of_lang";
+                    header_of_lang.innerHTML = "Language Skills";
+                    second_all_lang_skills.prepend(header_of_lang);
+
+                    var header_lang2 = document.createElement("div");
+                    header_lang2.className = "header_lang2";
+                    second_all_lang_skills.appendChild(header_lang2);
+
+                    var span_lang2 = document.createElement("span");
+                    span_lang2.innerHTML = "Another Tongue(s)";
+                    span_lang2.className = "span_lang2";
+                    header_lang2.appendChild(span_lang2);
+
+                    var languages2 = ["arabic", "english", "french", "germany", "spain", "persian"];
+                    var select_lang2 = document.createElement("select");
+                    select_lang2.id = "select_llang2";
+                    for (var i = 0; i < 6; i++) {
+                        var sel2 = document.createElement("option");
+                        sel2.innerText = languages2[i];
+                        select_lang2.appendChild(sel2);
+                    }
+                    header_lang2.appendChild(select_lang2);
+                    select_lang2.className = "select_lang2";
+
+                    var another_lang_selecting = document.getElementById("select_llang2");
+                    var val2_2 = another_lang_selecting.options[another_lang_selecting.selectedIndex].value;
+
+                    var all_level_lang = document.createElement("div");
+                    all_level_lang.className = "all_level_lang";
+                    second_all_lang_skills.appendChild(all_level_lang);
+                    var notes = document.createElement("div");
+                    notes.className = "notes";
+                    all_level_lang.appendChild(notes);
+                    notes.innerText = "First, Read The Notes in the bottom";
+                    for (var i = 0; i < 3; i++) {
+                        var divs_inside_all_level = document.createElement("div");
+                        divs_inside_all_level.className = "divs_inside_all_level";
+                        all_level_lang.appendChild(divs_inside_all_level);
+
+
+                    }
+                    var classes = ["div_level1", "div_level2", "div_level3", "div_level4"],
+                        classes_for_span_row1 = ["span_row11", "span_row12", "span_row13", "span_row14"],
+                        classes_for_select_level = ["select_row11", "select_row12", "select_row13", "select_row14"];
+                    for (var i = 0; i < 3; i++) {
+                        for (var j = 0; j < 2; j++) {
+                            var select_levels = document.createElement("div");
+                            select_levels.className = classes[i];
+                            document.getElementsByClassName("divs_inside_all_level")[i].appendChild(select_levels);
+                        }
+                    }
+                    var pp = 0;
+                    var rating_level = ["A1", "A2", "B1", "B2", "C1", "C2"];
+                    for (var i = 0; i < 3; i++) {
+                        for (var j = 0; j < 2; j++) {
+                            pp = 0;
+                            var span_row = document.createElement("span");
+                            var select_level = document.createElement("select");
+                            for (var q = 0; q < 6; q++) {
+                                var option_level = document.createElement("option");
+                                select_level.appendChild(option_level);
+                                option_level.innerText = rating_level[pp];
+                                var span_letters = document.createElement("span");
+                                option_level.appendChild(span_letters);
+
+                                pp++;
+                            }
+                            span_row.className = classes_for_span_row1[i];
+                            select_level.className = classes_for_select_level[i];
+
+                            if (i == 0) {
+                                document.getElementsByClassName("div_level1")[j].appendChild(span_row);
+                                document.getElementsByClassName("div_level1")[j].appendChild(select_level);
+
+                                if (j == 0) {
+                                    span_row.innerText = "Listening";
+
+                                }
+                                else {
+                                    span_row.innerText = "Reading";
+                                }
+                            }
+                            else if (i == 1) {
+                                document.getElementsByClassName("div_level2")[j].appendChild(span_row);
+                                document.getElementsByClassName("div_level2")[j].appendChild(select_level);
+                                if (j == 0) {
+                                    span_row.innerText = "Spoken production";
+
+                                }
+                                else {
+                                    span_row.innerText = "Spoken interaction";
+                                }
+                            }
+                            else if (i == 2) {
+                                document.getElementsByClassName("div_level3")[j].appendChild(span_row);
+                                document.getElementsByClassName("div_level3")[j].appendChild(select_level);
+                                if (j == 0) {
+                                    span_row.innerText = "Writing";
+                                }
+                                else {
+                                    document.getElementsByClassName("div_level3")[1].style.display = 'none';
+                                }
+                            }
+
+                        }
+                    }
+
+
+
+
+
+
+                }
+            }
+        </script>
+</body>
+
+</html>
